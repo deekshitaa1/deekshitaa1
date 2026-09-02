@@ -5,7 +5,7 @@
 <br>
 
 <a href="https://github.com/deekshitaa1">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=8B0000&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Data+Analyst+%7C+Data+Engineer;AI+Engineer+%7C+Software+Engineer;Data+%E2%86%92+Systems+%E2%86%92+Intelligence" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=DC143C&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Data+Analyst+%7C+Data+Engineer;AI+Engineer+%7C+Software+Engineer;Data+%E2%86%92+Systems+%E2%86%92+Intelligence" alt="typing banner">
 </a>
 <br>
 
