@@ -5,9 +5,8 @@
 <br>
 
 <a href="https://github.com/deekshitaa1">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=39D353&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Data+Analyst+%7C+Data+Engineer;AI+Engineer+%7C+Software+Engineer;Data+%E2%86%92+Systems+%E2%86%92+Intelligence" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=8B0000&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Data+Analyst+%7C+Data+Engineer;AI+Engineer+%7C+Software+Engineer;Data+%E2%86%92+Systems+%E2%86%92+Intelligence" alt="typing banner">
 </a>
-
 <br>
 
 <a href="https://www.linkedin.com/in/deekshita-rajesh">
@@ -23,7 +22,7 @@
   <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode">
 </a>
 
-<img src="https://komarev.com/ghpvc/?username=deekshitaa1&style=flat&color=39d353&label=profile+views" alt="profile views">
+
 
 </div>
 
