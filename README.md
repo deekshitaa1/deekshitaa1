@@ -10,10 +10,18 @@
 
 <br>
 
-<a href="https://www.linkedin.com/in/deekshita-rajesh"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="https://deekshitaa1.github.io/deekshita-portfolio/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"></a>
-<a href="https://github.com/deekshitaa1"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-<a href="https://aim-commercial-intelligence-dashboard.onrender.com"><img src="https://img.shields.io/badge/Live%20AIM-0A0A0A?style=for-the-badge&logo=render&logoColor=white" alt="Live AIM dashboard"></a>
+<a href="https://www.linkedin.com/in/deekshita-rajesh">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="mailto:deekshitarajesh1@gmail.com">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
+<a href="https://deekshitaa1.github.io/deekshita-portfolio/">
+  <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio">
+</a>
+<a href="https://leetcode.com/u/deekshiarajesh/">
+  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode">
+</a>
 
 <img src="https://komarev.com/ghpvc/?username=deekshitaa1&style=flat&color=39d353&label=profile+views" alt="profile views">
 
