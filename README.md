@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/portrait.svg" width="300" alt="Deekshita Rajesh — dot matrix portrait">
+<img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — dot matrix portrait">
 
 <br>
 
