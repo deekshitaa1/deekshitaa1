@@ -1,0 +1,21 @@
+{
+  "_comment": "Featured repositories. Descriptions are written for recruiter-facing portfolio context.",
+  "projects": [
+    {
+      "repo": "AIM-Commercial-Intelligence",
+      "description": "End-to-end commercial analytics platform combining data preparation, SQL analysis, KPI development, predictive modeling and decision-focused BI."
+    },
+    {
+      "repo": "NexoraAgri",
+      "description": "AI agricultural decision intelligence platform using temporal feature engineering, ML classification/regression and explainable recommendations."
+    },
+    {
+      "repo": "OmniRAG",
+      "description": "Enterprise AI knowledge platform covering document ingestion, extraction, deterministic chunking, PostgreSQL persistence and retrieval-ready data pipelines."
+    },
+    {
+      "repo": "CodeSync",
+      "description": "Real-time collaborative browser-based code editor focused on full-stack integration, APIs, real-time interaction and maintainable software architecture."
+    }
+  ]
+}

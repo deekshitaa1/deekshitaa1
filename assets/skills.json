@@ -1,0 +1,13 @@
+{
+  "title": "Engineering Focus",
+  "_comment": "Self-rated focus areas, not verified proficiency scores. Keep these as an honest representation and update over time.",
+  "axes": [
+    { "label": "Data Analytics", "value": 92 },
+    { "label": "SQL", "value": 90 },
+    { "label": "Data Engineering", "value": 82 },
+    { "label": "AI / ML", "value": 88 },
+    { "label": "Generative AI", "value": 90 },
+    { "label": "Backend / APIs", "value": 82 },
+    { "label": "DevOps", "value": 74 }
+  ]
+}
