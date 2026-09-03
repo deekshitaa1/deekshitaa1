@@ -1,15 +1,13 @@
 <div align="center">
 
+<img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — profile photo">
 
-         
-<img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — dot matrix portrait">
-
-
+<br>
 
 <a href="https://github.com/deekshitaa1">
-  <a href="https://github.com/deekshitaa1">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Data+Analyst;GenAI+%26+AI%2FML+Engineer;Data+Engineer;Software+Engineer;01000100+01000001+01010100+01000001" alt="typing banner">
 </a>
+
 <br>
 
 <a href="https://www.linkedin.com/in/deekshita-rajesh">
@@ -24,6 +22,8 @@
 <a href="https://leetcode.com/u/deekshiarajesh/">
   <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode">
 </a>
+
+</div>
 
 
 
