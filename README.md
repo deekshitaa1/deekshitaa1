@@ -16,7 +16,7 @@
 <a href="mailto:deekshitarajesh1@gmail.com">
   <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
 </a>
-<a href="https://deekshitaa1.github.io/deekshita-portfolio/">
+<a href="https://deekshita-portfolio-one.vercel.app/">
   <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio">
 </a>
 <a href="https://leetcode.com/u/deekshiarajesh/">
