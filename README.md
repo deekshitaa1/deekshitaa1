@@ -1,11 +1,14 @@
 <div align="center">
 
+
+         --cols 100 --equalize --detail 0.5 --color -->
 <img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — dot matrix portrait">
 
-<br>
+<br>font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=DC143C&center=
 
 <a href="https://github.com/deekshitaa1">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=DC143C&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Data+Analyst+%7C+Data+Engineer;AI+Engineer+%7C+Software+Engineer;Data+%E2%86%92+Systems+%E2%86%92+Intelligence" alt="typing banner">
+  <a href="https://github.com/deekshitaa1">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Data+Analyst;GenAI+%26+AI%2FML+Engineer;Data+Engineer;Software+Engineer;01000100+01000001+01010100+01000001" alt="typing banner">
 </a>
 <br>
 
