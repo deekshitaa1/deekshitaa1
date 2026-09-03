@@ -1,10 +1,10 @@
 <div align="center">
 
 
-         --cols 100 --equalize --detail 0.5 --color -->
+         
 <img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — dot matrix portrait">
 
-<br>font=JetBrains+Mono&weight=600&size=25&duration=2600&pause=900&color=DC143C&center=
+
 
 <a href="https://github.com/deekshitaa1">
   <a href="https://github.com/deekshitaa1">
