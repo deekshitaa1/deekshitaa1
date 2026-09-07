@@ -74,57 +74,38 @@ My work spans the full path from raw data and business questions to analytical m
 `Power BI` · `Data Visualization`  
 `Segmentation` · `Business Analysis`
 
-</td>
+## `~/` capabilities
+
+
+<tr>
 <td width="33%" valign="top">
 
 ### DATA ENGINEERING
 
-`ETL / ELT` · `Data Cleaning`  
-`Data Validation` · `Pipelines`  
-`PostgreSQL` · `MongoDB`  
-`Analytical Datasets` · `APIs`
+`SQL` · `Python` · `ETL / ELT`
+`Data Pipelines` · `Data Cleaning`
+`Data Validation` · `Data Transformation`
+`Data Warehousing` · `Data Modeling`
 
 </td>
 <td width="33%" valign="top">
 
-### AI / ML
+### DATA PLATFORMS
 
-`Scikit-learn` · `PyTorch` · `TensorFlow`  
-`Feature Engineering` · `Model Evaluation`  
-`LLMs` · `RAG` · `Embeddings`  
-`Agents` · `Decision Intelligence`
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-
-### SOFTWARE ENGINEERING
-
-`Python` · `FastAPI` · `REST APIs`  
-`React` · `TypeScript` · `Streamlit`  
-`SQLAlchemy` · `Git` · `Docker`  
-`Backend Architecture`
+`PostgreSQL` · `MySQL` · `MongoDB`
+`Apache Spark` · `PySpark`
+`Databricks` · `Azure`
+`APIs` · `Analytical Datasets`
 
 </td>
 <td width="33%" valign="top">
 
-### ENGINEERING PRACTICE
+### DATA QUALITY & ANALYTICS
 
-`System Design` · `Testing`  
-`Observability` · `CI/CD`  
-`Data Quality` · `Reproducibility`  
-`Deployment` · `Documentation`
-
-</td>
-<td width="33%" valign="top">
-
-### GENERATIVE AI
-
-`RAG` · `Vector Search` · `Prompting`  
-`Context Engineering` · `Tool Calling`  
-`Agentic Workflows` · `Evaluation`  
-`LLM Application Architecture`
+`Data Quality` · `Data Validation`
+`Data Profiling` · `EDA`
+`KPI Design` · `Data Visualization`
+`Power BI` · `Business Analysis`
 
 </td>
 </tr>
@@ -133,6 +114,7 @@ My work spans the full path from raw data and business questions to analytical m
 ---
 
 <div align="center">
+
 
 ## `~/` skill radar
 
