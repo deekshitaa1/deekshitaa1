@@ -63,20 +63,9 @@ My work spans the full path from raw data and business questions to analytical m
 
 ## `~/` capabilities
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### DATA ANALYTICS
-
-`SQL` · `Python` · `Pandas` · `NumPy`  
-`EDA` · `Statistics` · `KPI Design`  
-`Power BI` · `Data Visualization`  
-`Segmentation` · `Business Analysis`
-
 ## `~/` capabilities
 
-
+<table>
 <tr>
 <td width="33%" valign="top">
 
@@ -114,6 +103,7 @@ My work spans the full path from raw data and business questions to analytical m
 ---
 
 <div align="center">
+
 
 
 ## `~/` skill radar
