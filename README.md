@@ -62,54 +62,59 @@ My work spans the full path from raw data and business questions to analytical m
 ---
 
 ## `~/` capabilities
-
 ## `~/` capabilities
 
 <table>
-<tr>
-<td width="33%" valign="top">
-
-### SOFTWARE DEVELOPMENT
-`Data Structures & Algorithms` · `Object-Oriented Programming`
-`Problem Solving` · `Algorithms` · `System Design`
-<tr>
-<td width="33%" valign="top">
-### PROGRAMMING LANGUAGES
- `Python`  · `SQL`
-<tr>
-<td width="33%" valign="top">
-### BACKEND DEVELOPMENT
-`REST APIs` · `Microservices` · `Spring Boot`
-`Distributed Systems` · `Error Handling` · `Authentication`
-<tr>
-<td width="33%" valign="top">
-### DATABASES
-`Amazon DynamoDB` · `PostgreSQL` · `MySQL`
-`Amazon RDS` · `Amazon ElastiCache`
-<tr>
-<td width="33%" valign="top">
-### CLOUD & AWS
-`AWS` · `Amazon EC2` · `Amazon S3`
-`AWS Lambda` · `Amazon SQS` · `Amazon SNS`
-`IAM` · `CloudWatch`
-<tr>
-<td width="33%" valign="top">
-
-### DEVELOPER TOOLS
-`Git` · `GitHub` · `Linux`
-`Docker` · `CI/CD` · `Unit Testing`
-<tr>
-<td width="33%" valign="top">
-### ENGINEERING FUNDAMENTALS
-`Operating Systems` · `Computer Networks`
-`DBMS` · `Concurrency` · `Multithreading`
-`Object-Oriented Design` · `Scalability`
   <tr>
-<td width="33%" valign="top">
-</td>
-</tr>
+    <td width="33%" valign="top">
+      <h3>SOFTWARE DEVELOPMENT</h3>
+      <code>Data Structures & Algorithms</code> ·
+      <code>Object-Oriented Programming</code><br>
+      <code>Problem Solving</code> ·
+      <code>System Design</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>PROGRAMMING LANGUAGES</h3>
+      <code>Python</code> · <code>Java</code> · <code>SQL</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>BACKEND DEVELOPMENT</h3>
+      <code>REST APIs</code> · <code>Microservices</code><br>
+      <code>Spring Boot</code> · <code>Authentication</code><br>
+      <code>Error Handling</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>DATABASES</h3>
+      <code>Amazon DynamoDB</code> · <code>PostgreSQL</code><br>
+      <code>MySQL</code> · <code>Amazon RDS</code><br>
+      <code>Amazon ElastiCache</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>CLOUD & AWS</h3>
+      <code>AWS</code> · <code>Amazon EC2</code><br>
+      <code>Amazon S3</code> · <code>AWS Lambda</code><br>
+      <code>Amazon SQS</code> · <code>Amazon SNS</code><br>
+      <code>IAM</code> · <code>CloudWatch</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>DEVELOPER TOOLS</h3>
+      <code>Git</code> · <code>GitHub</code> · <code>Linux</code><br>
+      <code>Docker</code> · <code>CI/CD</code><br>
+      <code>Unit Testing</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" valign="top">
+      <h3>ENGINEERING FUNDAMENTALS</h3>
+      <code>Operating Systems</code> · <code>Computer Networks</code> ·
+      <code>DBMS</code> · <code>Concurrency</code> ·
+      <code>Multithreading</code> · <code>Object-Oriented Design</code> ·
+      <code>Scalability</code>
+    </td>
+  </tr>
 </table>
-
 ---
 
 <div align="center">
