@@ -38,7 +38,7 @@ $ whoami
 Deekshita Rajesh
 
 $ focus --current
-Data Analytics  |  Data Engineering  |  AI Engineering  |  Software Engineering
+Software Engineering
 
 $ objective
 Turn data into decisions, intelligent systems, and production-ready software.
@@ -69,33 +69,43 @@ My work spans the full path from raw data and business questions to analytical m
 <tr>
 <td width="33%" valign="top">
 
-### DATA ENGINEERING
-
-`SQL` · `Python` · `ETL / ELT`
-`Data Pipelines` · `Data Cleaning`
-`Data Validation` · `Data Transformation`
-`Data Warehousing` · `Data Modeling`
-
-</td>
+### SOFTWARE DEVELOPMENT
+`Data Structures & Algorithms` · `Object-Oriented Programming`
+`Problem Solving` · `Algorithms` · `System Design`
+<tr>
+<td width="33%" valign="top">
+### PROGRAMMING LANGUAGES
+ `Python`  · `SQL`
+<tr>
+<td width="33%" valign="top">
+### BACKEND DEVELOPMENT
+`REST APIs` · `Microservices` · `Spring Boot`
+`Distributed Systems` · `Error Handling` · `Authentication`
+<tr>
+<td width="33%" valign="top">
+### DATABASES
+`Amazon DynamoDB` · `PostgreSQL` · `MySQL`
+`Amazon RDS` · `Amazon ElastiCache`
+<tr>
+<td width="33%" valign="top">
+### CLOUD & AWS
+`AWS` · `Amazon EC2` · `Amazon S3`
+`AWS Lambda` · `Amazon SQS` · `Amazon SNS`
+`IAM` · `CloudWatch`
+<tr>
 <td width="33%" valign="top">
 
-### DATA PLATFORMS
-
-`PostgreSQL` · `MySQL` · `MongoDB`
-`Apache Spark` · `PySpark`
-`Databricks` · `Azure`
-`APIs` · `Analytical Datasets`
-
-</td>
+### DEVELOPER TOOLS
+`Git` · `GitHub` · `Linux`
+`Docker` · `CI/CD` · `Unit Testing`
+<tr>
 <td width="33%" valign="top">
-
-### DATA QUALITY & ANALYTICS
-
-`Data Quality` · `Data Validation`
-`Data Profiling` · `EDA`
-`KPI Design` · `Data Visualization`
-`Power BI` · `Business Analysis`
-
+### ENGINEERING FUNDAMENTALS
+`Operating Systems` · `Computer Networks`
+`DBMS` · `Concurrency` · `Multithreading`
+`Object-Oriented Design` · `Scalability`
+  <tr>
+<td width="33%" valign="top">
 </td>
 </tr>
 </table>
