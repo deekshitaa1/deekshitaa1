@@ -61,7 +61,7 @@ My work spans the full path from raw data and business questions to analytical m
 
 ---
 
-## `~/` capabilities
+
 ## `~/` capabilities
 
 <table>
@@ -218,61 +218,37 @@ The goal is not to build isolated notebooks or isolated AI demos. It is to build
 
 | System | Role | Engineering focus |
 |---|---|---|
-| **[AIM Commercial Intelligence](https://github.com/deekshitaa1/AIM-Commercial-Intelligence)** | Data Analytics · BI · Decision Support | Data cleaning → SQL → EDA → KPI design → ML → business prioritization → dashboard |
+
 | **[NexoraAgri](https://github.com/deekshitaa1/NexoraAgri)** | AI Engineering · ML | Data validation → temporal features → classification + regression → explainability → decision engine |
 | **[OmniRAG](https://github.com/deekshitaa1/OmniRAG)** | AI Engineering · Data Engineering | Document ingestion → extraction → chunking → PostgreSQL → vector retrieval → RAG |
 | **[CodeSync](https://github.com/deekshitaa1/CodeSync)** | Software Engineering | Frontend/backend integration → APIs → real-time collaboration → maintainable application architecture |
 
----
 
-## `~/` live systems
-
-| Product | Role | Status |
-|---|---|---|
-| **AIM Commercial Intelligence** | Data Analytics · BI · Predictive Decision Support | **LIVE** |
-| **AIM API** | FastAPI · REST Analytics Backend | **LIVE** |
-| **AIM Health** | API Health Monitoring | **ONLINE** |
-
-**[OPEN LIVE DASHBOARD](https://aim-commercial-intelligence-dashboard.onrender.com)** · **[OPEN API](https://aim-commercial-intelligence-api-jnrs.onrender.com)** · **[HEALTH CHECK](https://aim-commercial-intelligence-api-jnrs.onrender.com)**
 
 ---
 
-## `~/` data → decision
+## `~/` code → deployment
 
 ```text
-BUSINESS QUESTION
-      ↓
-RAW DATA
-      ↓
-CLEAN + VALIDATE
-      ↓
-SQL / PYTHON
-      ↓
-EDA + KPI DEVELOPMENT
-      ↓
-STATISTICAL ANALYSIS
-      ↓
-MACHINE LEARNING
-      ↓
-BUSINESS VALUE
-      ↓
-DASHBOARD / API
-      ↓
-DECISION + ACTION
-```
-
-### Analytics toolkit
-
-| Area | What I work with |
-|---|---|
-| **Data Analysis** | Data cleaning, EDA, feature engineering, statistics, KPI development |
-| **SQL** | Joins, CTEs, aggregations, analytical queries, business metrics |
-| **BI** | Power BI, dashboards, segmentation, executive reporting |
-| **Machine Learning** | Classification, regression, clustering, anomaly detection, evaluation |
-| **Data Engineering** | ETL, preprocessing, data validation, analytical datasets, APIs |
-| **GenAI** | LLM applications, RAG, embeddings, vector search, agentic workflows |
-| **Software Engineering** | Python, FastAPI, REST APIs, databases, Streamlit, Docker, Git |
-
+ENGINEERING REQUIREMENT
+        ↓
+PROBLEM DECOMPOSITION
+        ↓
+DATA STRUCTURES & ALGORITHMS
+        ↓
+DESIGN + ARCHITECTURE
+        ↓
+IMPLEMENTATION
+        ↓
+UNIT + INTEGRATION TESTING
+        ↓
+CODE REVIEW + DEBUGGING
+        ↓
+CI/CD + DEPLOYMENT
+        ↓
+MONITORING + OPTIMIZATION
+        ↓
+SCALABLE SOFTWARE
 ---
 
 <div align="center">
@@ -340,11 +316,13 @@ DECISION + ACTION
 
 <div align="center">
 
-### DATA · ANALYTICS · ENGINEERING · AI
+### SOFTWARE DEVELOPMENT · SYSTEM DESIGN · CLOUD
 
 **Deekshita Rajesh**  
+
 [LinkedIn](https://www.linkedin.com/in/deekshita-rajesh) · [GitHub](https://github.com/deekshitaa1) · [Portfolio](https://deekshitaa1.github.io/deekshita-portfolio/)
 
-<sub>`01000100 01000001 01010100 01000001 00100000 01011100 00100000 01001001 01001110 01010100 01000101 01001100 01001100 01001001 01000111 01000101 01001110 01000011 01000101`</sub>
+<sub>`01010011 01001111 01000110 01010100 01010111 01000001 01010010 01000101 00100000 01000101 01001110 01000111 01001001 01001110 01000101 01000101 01010010 01001001 01001110 01000111`</sub>
+
 
 </div>
