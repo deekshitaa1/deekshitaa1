@@ -153,28 +153,31 @@ I enjoy turning requirements into maintainable applications through clean code, 
 ## `~/` engineering loop
 
 ```text
-                         USER / BUSINESS REQUIREMENT
-                                   │
-                                   ▼
-                          REQUIREMENTS + EDGE CASES
-                                   │
-                                   ▼
-                          DATA STRUCTURES + DESIGN
-                                   │
-                                   ▼
-                         IMPLEMENTATION + APIs
-                                   │
-                                   ▼
-                           UNIT / INTEGRATION TESTS
-                                   │
-                                   ▼
-                          CODE REVIEW + DEBUGGING
-                                   │
-                                   ▼
-                            CI/CD + DEPLOYMENT
-                                   │
-                                   ▼
-                         MONITOR + IMPROVE + SCALE
+                           USER REQUIREMENT
+                                  │
+                                  ▼
+                       CLARIFY SCOPE + EDGE CASES
+                                  │
+                                  ▼
+                    BREAK DOWN PROBLEM + DESIGN APIs
+                                  │
+                                  ▼
+                    SELECT DATA STRUCTURES + DATABASES
+                                  │
+                                  ▼
+                       IMPLEMENT CLEAN, MODULAR CODE
+                                  │
+                                  ▼
+                       UNIT + INTEGRATION TESTS
+                                  │
+                                  ▼
+                       DEBUG + REVIEW + REFACTOR
+                                  │
+                                  ▼
+                           CI/CD + DEPLOYMENT
+                                  │
+                                  ▼
+                       MONITOR + OPTIMIZE + SCALE
 ```
 
 The goal is to build **maintainable, tested, and scalable software**—from clear requirements and sound design through deployment and iteration.
