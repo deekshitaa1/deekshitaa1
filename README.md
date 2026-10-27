@@ -5,7 +5,7 @@
 <br>
 
 <a href="https://github.com/deekshitaa1">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Data+Analyst;GenAI+%26+AI%2FML+Engineer;Data+Engineer;Software+Engineer;01000100+01000001+01010100+01000001" alt="typing banner">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Software+Development+Engineer;Backend+%26+API+Development;Data+Structures+%26+Algorithms;System+Design+%26+Cloud;01010011+01000100+01000101" alt="typing banner">
 </a>
 
 <br>
@@ -41,13 +41,13 @@ $ focus --current
 Software Engineering
 
 $ objective
-Turn data into decisions, intelligent systems, and production-ready software.
+Design, build, test, and deploy reliable, scalable, production-ready software.
 ```
 
-I build end-to-end systems that connect **data, analytics, machine learning and software engineering**.
-My work spans the full path from raw data and business questions to analytical models, APIs, AI workflows and deployable applications.
+I focus on **software development, backend engineering, data structures and algorithms, and system design**.
+I enjoy turning requirements into maintainable applications through clean code, APIs, database design, testing, and deployment. I also apply data and AI where they strengthen the product.
 
-> **Analyze the data. Engineer the system. Automate the decision.**
+> **Understand the problem. Build the solution. Test it. Ship it.**
 
 ---
 
@@ -153,33 +153,31 @@ My work spans the full path from raw data and business questions to analytical m
 ## `~/` engineering loop
 
 ```text
-                         BUSINESS / USER PROBLEM
+                         USER / BUSINESS REQUIREMENT
                                    │
                                    ▼
-                            DEFINE THE QUESTION
+                          REQUIREMENTS + EDGE CASES
                                    │
                                    ▼
-                              RAW DATA + CONTEXT
-                                   │
-                     ┌─────────────┴─────────────┐
-                     ▼                           ▼
-              CLEAN / VALIDATE              ANALYZE / MODEL
-                     │                           │
-                     └─────────────┬─────────────┘
-                                   ▼
-                         INSIGHT / INTELLIGENCE
+                          DATA STRUCTURES + DESIGN
                                    │
                                    ▼
-                         API / DASHBOARD / APP
+                         IMPLEMENTATION + APIs
                                    │
                                    ▼
-                              DEPLOY + OBSERVE
+                           UNIT / INTEGRATION TESTS
                                    │
                                    ▼
-                              MEASURE + ITERATE
+                          CODE REVIEW + DEBUGGING
+                                   │
+                                   ▼
+                            CI/CD + DEPLOYMENT
+                                   │
+                                   ▼
+                         MONITOR + IMPROVE + SCALE
 ```
 
-The goal is not to build isolated notebooks or isolated AI demos. It is to build **reproducible systems that answer real questions and produce usable outcomes**.
+The goal is to build **maintainable, tested, and scalable software**—from clear requirements and sound design through deployment and iteration.
 
 ---
 
@@ -249,6 +247,8 @@ CI/CD + DEPLOYMENT
 MONITORING + OPTIMIZATION
         ↓
 SCALABLE SOFTWARE
+```
+
 ---
 
 <div align="center">
@@ -302,14 +302,14 @@ SCALABLE SOFTWARE
 ## `~/` engineering principles
 
 ```text
-01  START WITH THE BUSINESS QUESTION
-02  VALIDATE DATA BEFORE MODELING
-03  KEEP ANALYSIS REPRODUCIBLE
-04  USE THE SIMPLEST EFFECTIVE MODEL
-05  CONNECT METRICS TO BUSINESS VALUE
-06  BUILD SYSTEMS THAT CAN BE EXPLAINED
-07  DEPLOYMENT IS PART OF ENGINEERING
-08  SHIP · MEASURE · ITERATE
+01  CLARIFY REQUIREMENTS AND EDGE CASES
+02  CHOOSE APPROPRIATE DATA STRUCTURES
+03  WRITE CLEAN, MAINTAINABLE CODE
+04  DESIGN FOR FAILURE AND SCALABILITY
+05  TEST EARLY; DEBUG SYSTEMATICALLY
+06  REVIEW FOR CORRECTNESS AND READABILITY
+07  AUTOMATE BUILDS, TESTS, AND DEPLOYMENTS
+08  SHIP · MONITOR · IMPROVE · SCALE
 ```
 
 ---
