@@ -1,85 +1,328 @@
-from pathlib import Path
+<div align="center">
 
-original = Path("/mnt/data/Pasted text(20261027-050425).txt")
-text = original.read_text(encoding="utf-8")
+<img src="assets/profile-photo.png" width="300" alt="Deekshita Rajesh — profile photo">
 
-# Preserve the existing photo, project cards, radar graphics, contribution calendar,
-# animated snake, stats, certifications, links, and overall README structure.
-replacements = [
-    (
-        "https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Data+Analyst;GenAI+%26+AI%2FML+Engineer;Data+Engineer;Software+Engineer;01000100+01000001+01010100+01000001",
-        "https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=700&lines=Deekshita+Rajesh;Software+Development+Engineer;Data+Structures+%26+Algorithms;Backend+%26+Distributed+Systems;System+Design+%26+Cloud"
-    ),
-    (
-        "## `~/` whoami\n\n```console\n$ whoami\nDeekshita Rajesh\n\n$ focus --current\nSoftware Engineering\n\n$ objective\nTurn data into decisions, intelligent systems, and production-ready software.\n```\n\nI build end-to-end systems that connect **data, analytics, machine learning and software engineering**.\nMy work spans the full path from raw data and business questions to analytical models, APIs, AI workflows and deployable applications.\n\n> **Analyze the data. Engineer the system. Automate the decision.**",
-        "## `~/` whoami\n\n```console\n$ whoami\nDeekshita Rajesh\n\n$ role --focus\nSoftware Development Engineer\n\n$ core_skills\nData Structures & Algorithms | OOP | Backend | System Design\n\n$ objective\nDesign, build, test, and scale reliable software systems.\n```\n\nI focus on **problem-solving, software development, backend engineering, and scalable system design**. I enjoy turning complex requirements into efficient, maintainable, and reliable software.\n\n> **Think in algorithms. Engineer for reliability. Build for scale.**"
-    ),
-    (
-        "https://skillicons.dev/icons?i=python,postgres,mongodb,pytorch,tensorflow,fastapi,docker,git,github,react,nextjs,typescript,html,css&perline=14",
-        "https://skillicons.dev/icons?i=python,java,cpp,postgres,mysql,mongodb,spring,fastapi,aws,docker,git,github,linux&perline=13"
-    ),
-    (
-        "<code>Python</code> · <code>Java</code> · <code>SQL</code>",
-        "<code>Python</code> · <code>Java</code> · <code>C++</code> · <code>SQL</code>"
-    ),
-    (
-        "<code>REST APIs</code> · <code>Microservices</code><br>\n      <code>Spring Boot</code> · <code>Authentication</code><br>\n      <code>Error Handling</code>",
-        "<code>REST APIs</code> · <code>Spring Boot</code><br>\n      <code>API Design</code> · <code>Authentication</code><br>\n      <code>Error Handling</code> · <code>Microservices</code>"
-    ),
-    (
-        "<code>Amazon DynamoDB</code> · <code>PostgreSQL</code><br>\n      <code>MySQL</code> · <code>Amazon RDS</code><br>\n      <code>Amazon ElastiCache</code>",
-        "<code>PostgreSQL</code> · <code>MySQL</code><br>\n      <code>Amazon DynamoDB</code> · <code>Amazon RDS</code><br>\n      <code>Indexing</code> · <code>Query Optimization</code>"
-    ),
-    (
-        "<code>Git</code> · <code>GitHub</code> · <code>Linux</code><br>\n      <code>Docker</code> · <code>CI/CD</code><br>\n      <code>Unit Testing</code>",
-        "<code>Git</code> · <code>GitHub</code> · <code>Linux</code><br>\n      <code>Docker</code> · <code>CI/CD</code><br>\n      <code>Unit Testing</code> · <code>Debugging</code>"
-    ),
-    (
-        "<code>Operating Systems</code> · <code>Computer Networks</code> ·\n      <code>DBMS</code> · <code>Concurrency</code> ·\n      <code>Multithreading</code> · <code>Object-Oriented Design</code> ·\n      <code>Scalability</code>",
-        "<code>Operating Systems</code> · <code>Computer Networks</code> ·\n      <code>DBMS</code> · <code>OOP</code> ·\n      <code>Concurrency</code> · <code>Multithreading</code> ·\n      <code>Object-Oriented Design</code> · <code>Scalability</code>"
-    ),
-    (
-        "## `~/` engineering loop\n\n```text\n                         BUSINESS / USER PROBLEM\n                                   │\n                                   ▼\n                            DEFINE THE QUESTION\n                                   │\n                                   ▼\n                              RAW DATA + CONTEXT\n                                   │\n                     ┌─────────────┴─────────────┐\n                     ▼                           ▼\n              CLEAN / VALIDATE              ANALYZE / MODEL\n                     │                           │\n                     └─────────────┬─────────────┘\n                                   ▼\n                         INSIGHT / INTELLIGENCE\n                                   │\n                                   ▼\n                         API / DASHBOARD / APP\n                                   │\n                                   ▼\n                              DEPLOY + OBSERVE\n                                   │\n                                   ▼\n                              MEASURE + ITERATE\n```\n\nThe goal is not to build isolated notebooks or isolated AI demos. It is to build **reproducible systems that answer real questions and produce usable outcomes**.",
-        "## `~/` engineering loop\n\n```text\n                         USER / SYSTEM REQUIREMENT\n                                   │\n                                   ▼\n                         PROBLEM DECOMPOSITION\n                                   │\n                                   ▼\n                         DATA STRUCTURES & ALGORITHMS\n                                   │\n                                   ▼\n                           DESIGN & ARCHITECTURE\n                                   │\n                                   ▼\n                              IMPLEMENTATION\n                                   │\n                                   ▼\n                         UNIT + INTEGRATION TESTS\n                                   │\n                                   ▼\n                          CODE REVIEW + DEBUGGING\n                                   │\n                                   ▼\n                           CI/CD + DEPLOYMENT\n                                   │\n                                   ▼\n                         MONITOR + OPTIMIZE + SCALE\n```\n\nI aim to build **maintainable, tested, and reliable software**—from understanding requirements and choosing the right data structures to deployment, monitoring, and iterative improvement."
-    ),
-    (
-        "| **[NexoraAgri](https://github.com/deekshitaa1/NexoraAgri)** | AI Engineering · ML | Data validation → temporal features → classification + regression → explainability → decision engine |\n| **[OmniRAG](https://github.com/deekshitaa1/OmniRAG)** | AI Engineering · Data Engineering | Document ingestion → extraction → chunking → PostgreSQL → vector retrieval → RAG |\n| **[CodeSync](https://github.com/deekshitaa1/CodeSync)** | Software Engineering | Frontend/backend integration → APIs → real-time collaboration → maintainable application architecture |",
-        "| **[CodeSync](https://github.com/deekshitaa1/CodeSync)** | Software Engineering | Frontend/backend integration → API design → real-time collaboration → maintainable application architecture |\n| **[OmniRAG](https://github.com/deekshitaa1/OmniRAG)** | Backend · Data Systems | Document ingestion → PostgreSQL → retrieval pipeline → API integration |\n| **[NexoraAgri](https://github.com/deekshitaa1/NexoraAgri)** | Application Engineering | Data validation → application logic → service integration → decision support |"
-    ),
-    (
-        "01  START WITH THE BUSINESS QUESTION\n02  VALIDATE DATA BEFORE MODELING\n03  KEEP ANALYSIS REPRODUCIBLE\n04  USE THE SIMPLEST EFFECTIVE MODEL\n05  CONNECT METRICS TO BUSINESS VALUE\n06  BUILD SYSTEMS THAT CAN BE EXPLAINED\n07  DEPLOYMENT IS PART OF ENGINEERING\n08  SHIP · MEASURE · ITERATE",
-        "01  UNDERSTAND THE REQUIREMENTS\n02  CHOOSE THE RIGHT DATA STRUCTURES\n03  WRITE CLEAN, READABLE CODE\n04  DESIGN FOR FAILURE AND EDGE CASES\n05  TEST EARLY AND DEBUG SYSTEMATICALLY\n06  REVIEW FOR CORRECTNESS AND MAINTAINABILITY\n07  AUTOMATE BUILDS AND DEPLOYMENTS\n08  SHIP · MONITOR · ITERATE"
-    ),
-    (
-        "### SOFTWARE DEVELOPMENT · SYSTEM DESIGN · CLOUD",
-        "### SOFTWARE DEVELOPMENT · DATA STRUCTURES & ALGORITHMS · SYSTEM DESIGN"
-    ),
-    (
-        "`01010011 01001111 01000110 01010100 01010111 01000001 01010010 01000101 00100000 01000101 01001110 01000111 01001001 01001110 01000101 01000101 01010010 01001001 01001110 01000111`",
-        "`01010011 01001111 01000110 01010100 01010111 01000001 01010010 01000101 00100000 01000100 01000101 01010110 01000101 01001100 01001111 01010000 01001101 01000101 01001110 01010100`"
-    )
-]
+<br>
 
-for old, new in replacements:
-    if old not in text:
-        print("WARNING: replacement pattern not found:", old[:90].replace("\n", " "))
-    text = text.replace(old, new, 1)
+<a href="https://github.com/deekshitaa1">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=E91E63&center=true&vCenter=true&width=650&lines=Deekshita+Rajesh;Data+Analyst;GenAI+%26+AI%2FML+Engineer;Data+Engineer;Software+Engineer;01000100+01000001+01010100+01000001" alt="typing banner">
+</a>
 
-# Fix an existing unclosed code fence in the deployment section and retain the following sections.
-text = text.replace(
-    "        ↓\n        ↓\n        ↓\n        ↓\n        ↓\n        ↓\n        ↓\n        ↓\n        ↓\n        ↓\nSCALABLE SOFTWARE\n---",
-    "        ↓\nSCALABLE SOFTWARE\n```\n\n---",
-    1
-)
-# If original indentation differs, repair the known boundary directly.
-if "SCALABLE SOFTWARE\n---\n\n<div align=\"center\">\n\n## `~/` contribution activity" in text:
-    text = text.replace(
-        "SCALABLE SOFTWARE\n---\n\n<div align=\"center\">\n\n## `~/` contribution activity",
-        "SCALABLE SOFTWARE\n```\n\n---\n\n<div align=\"center\">\n\n## `~/` contribution activity",
-        1
-    )
+<br>
 
-# Keep the profile photo and animated contribution snake intact; output the full updated README.
-out = Path("/mnt/data/README_SDE.md")
-out.write_text(text, encoding="utf-8")
-print(f"Created {out}; {len(text.splitlines())} lines.")
+<a href="https://www.linkedin.com/in/deekshita-rajesh">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="mailto:deekshitarajesh1@gmail.com">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
+<a href="https://deekshita-portfolio-one.vercel.app/">
+  <img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio">
+</a>
+<a href="https://leetcode.com/u/deekshiarajesh/">
+  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode">
+</a>
+
+</div>
+
+
+
+</div>
+
+---
+
+## `~/` whoami
+
+```console
+$ whoami
+Deekshita Rajesh
+
+$ focus --current
+Software Engineering
+
+$ objective
+Turn data into decisions, intelligent systems, and production-ready software.
+```
+
+I build end-to-end systems that connect **data, analytics, machine learning and software engineering**.
+My work spans the full path from raw data and business questions to analytical models, APIs, AI workflows and deployable applications.
+
+> **Analyze the data. Engineer the system. Automate the decision.**
+
+---
+
+<div align="center">
+
+## `~/` toolbox
+
+<img src="https://skillicons.dev/icons?i=python,postgres,mongodb,pytorch,tensorflow,fastapi,docker,git,github,react,nextjs,typescript,html,css&perline=14" alt="technology stack">
+
+</div>
+
+---
+
+
+## `~/` capabilities
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>SOFTWARE DEVELOPMENT</h3>
+      <code>Data Structures & Algorithms</code> ·
+      <code>Object-Oriented Programming</code><br>
+      <code>Problem Solving</code> ·
+      <code>System Design</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>PROGRAMMING LANGUAGES</h3>
+      <code>Python</code> · <code>Java</code> · <code>SQL</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>BACKEND DEVELOPMENT</h3>
+      <code>REST APIs</code> · <code>Microservices</code><br>
+      <code>Spring Boot</code> · <code>Authentication</code><br>
+      <code>Error Handling</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>DATABASES</h3>
+      <code>Amazon DynamoDB</code> · <code>PostgreSQL</code><br>
+      <code>MySQL</code> · <code>Amazon RDS</code><br>
+      <code>Amazon ElastiCache</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>CLOUD & AWS</h3>
+      <code>AWS</code> · <code>Amazon EC2</code><br>
+      <code>Amazon S3</code> · <code>AWS Lambda</code><br>
+      <code>Amazon SQS</code> · <code>Amazon SNS</code><br>
+      <code>IAM</code> · <code>CloudWatch</code>
+    </td>
+    <td width="33%" valign="top">
+      <h3>DEVELOPER TOOLS</h3>
+      <code>Git</code> · <code>GitHub</code> · <code>Linux</code><br>
+      <code>Docker</code> · <code>CI/CD</code><br>
+      <code>Unit Testing</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" valign="top">
+      <h3>ENGINEERING FUNDAMENTALS</h3>
+      <code>Operating Systems</code> · <code>Computer Networks</code> ·
+      <code>DBMS</code> · <code>Concurrency</code> ·
+      <code>Multithreading</code> · <code>Object-Oriented Design</code> ·
+      <code>Scalability</code>
+    </td>
+  </tr>
+</table>
+---
+
+<div align="center">
+
+
+
+## `~/` skill radar
+
+<table>
+<tr>
+<td width="50%" align="center" valign="middle">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
+  <img src="assets/radar-dark.svg" width="400" alt="engineering focus radar">
+</picture>
+
+</td>
+<td width="50%" align="center" valign="middle">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-delivery-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-delivery-light.svg">
+  <img src="assets/radar-delivery-dark.svg" width="400" alt="system delivery radar">
+</picture>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## `~/` engineering loop
+
+```text
+                         BUSINESS / USER PROBLEM
+                                   │
+                                   ▼
+                            DEFINE THE QUESTION
+                                   │
+                                   ▼
+                              RAW DATA + CONTEXT
+                                   │
+                     ┌─────────────┴─────────────┐
+                     ▼                           ▼
+              CLEAN / VALIDATE              ANALYZE / MODEL
+                     │                           │
+                     └─────────────┬─────────────┘
+                                   ▼
+                         INSIGHT / INTELLIGENCE
+                                   │
+                                   ▼
+                         API / DASHBOARD / APP
+                                   │
+                                   ▼
+                              DEPLOY + OBSERVE
+                                   │
+                                   ▼
+                              MEASURE + ITERATE
+```
+
+The goal is not to build isolated notebooks or isolated AI demos. It is to build **reproducible systems that answer real questions and produce usable outcomes**.
+
+---
+
+<div align="center">
+
+## `~/` selected systems
+
+<table>
+<tr>
+<td width="50%">
+  <a href="https://github.com/deekshitaa1/AIM-Commercial-Intelligence">
+    <picture><source media="(prefers-color-scheme: light)" srcset="assets/card-aim-light.svg"><img src="assets/card-aim-dark.svg" width="420" alt="AIM Commercial Intelligence"></picture>
+  </a>
+</td>
+<td width="50%">
+  <a href="https://github.com/deekshitaa1/NexoraAgri">
+    <picture><source media="(prefers-color-scheme: light)" srcset="assets/card-nexora-light.svg"><img src="assets/card-nexora-dark.svg" width="420" alt="NexoraAgri"></picture>
+  </a>
+</td>
+</tr>
+<tr>
+<td width="50%">
+  <a href="https://github.com/deekshitaa1/OmniRAG">
+    <picture><source media="(prefers-color-scheme: light)" srcset="assets/card-omnirag-light.svg"><img src="assets/card-omnirag-dark.svg" width="420" alt="OmniRAG"></picture>
+  </a>
+</td>
+<td width="50%">
+  <a href="https://github.com/deekshitaa1/CodeSync">
+    <picture><source media="(prefers-color-scheme: light)" srcset="assets/card-codesync-light.svg"><img src="assets/card-codesync-dark.svg" width="420" alt="CodeSync"></picture>
+  </a>
+</td>
+</tr>
+</table>
+
+</div>
+
+| System | Role | Engineering focus |
+|---|---|---|
+
+| **[NexoraAgri](https://github.com/deekshitaa1/NexoraAgri)** | AI Engineering · ML | Data validation → temporal features → classification + regression → explainability → decision engine |
+| **[OmniRAG](https://github.com/deekshitaa1/OmniRAG)** | AI Engineering · Data Engineering | Document ingestion → extraction → chunking → PostgreSQL → vector retrieval → RAG |
+| **[CodeSync](https://github.com/deekshitaa1/CodeSync)** | Software Engineering | Frontend/backend integration → APIs → real-time collaboration → maintainable application architecture |
+
+
+
+---
+
+## `~/` code → deployment
+
+```text
+ENGINEERING REQUIREMENT
+        ↓
+PROBLEM DECOMPOSITION
+        ↓
+DATA STRUCTURES & ALGORITHMS
+        ↓
+DESIGN + ARCHITECTURE
+        ↓
+IMPLEMENTATION
+        ↓
+UNIT + INTEGRATION TESTING
+        ↓
+CODE REVIEW + DEBUGGING
+        ↓
+CI/CD + DEPLOYMENT
+        ↓
+MONITORING + OPTIMIZATION
+        ↓
+SCALABLE SOFTWARE
+---
+
+<div align="center">
+
+## `~/` contribution activity
+
+<img src="assets/metrics.isocalendar.svg" width="90%" alt="GitHub contribution calendar">
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/deekshitaa1/deekshitaa1/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/deekshitaa1/deekshitaa1/output/snake.svg">
+  <img src="https://raw.githubusercontent.com/deekshitaa1/deekshitaa1/output/snake.svg" width="100%" alt="snake contribution animation">
+</picture>
+
+</div>
+
+---
+
+<div align="center">
+
+## `~/` the numbers
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
+  <img src="assets/card-stats-dark.svg" width="480" alt="GitHub statistics">
+</picture>
+
+<br>
+
+<img src="assets/metrics.languages.svg" height="165" alt="most used languages">
+
+<br><br>
+
+<img src="assets/metrics.achievements.svg" width="90%" alt="GitHub achievements">
+
+</div>
+
+---
+
+## `~/` certifications & learning
+
+`Google Data Analytics Professional Certificate` · `Microsoft AI Fundamentals (AI-900)` · `NPTEL Data Science for Engineers`
+
+`DeepLearning.AI Neural Networks and Deep Learning` · `MongoDB Deploying GenAI Apps` · `Infosys Springboard Generative AI` · `ServiceNow Micro-Certification`
+
+---
+
+## `~/` engineering principles
+
+```text
+01  START WITH THE BUSINESS QUESTION
+02  VALIDATE DATA BEFORE MODELING
+03  KEEP ANALYSIS REPRODUCIBLE
+04  USE THE SIMPLEST EFFECTIVE MODEL
+05  CONNECT METRICS TO BUSINESS VALUE
+06  BUILD SYSTEMS THAT CAN BE EXPLAINED
+07  DEPLOYMENT IS PART OF ENGINEERING
+08  SHIP · MEASURE · ITERATE
+```
+
+---
+
+<div align="center">
+
+### SOFTWARE DEVELOPMENT · SYSTEM DESIGN · CLOUD
+
+**Deekshita Rajesh**  
+
+[LinkedIn](https://www.linkedin.com/in/deekshita-rajesh) · [GitHub](https://github.com/deekshitaa1) · [Portfolio](https://deekshitaa1.github.io/deekshita-portfolio/)
+
+<sub>`01010011 01001111 01000110 01010100 01010111 01000001 01010010 01000101 00100000 01000101 01001110 01000111 01001001 01001110 01000101 01000101 01010010 01001001 01001110 01000111`</sub>
+
+
+</div>
