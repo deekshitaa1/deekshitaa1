@@ -119,31 +119,29 @@ I enjoy turning requirements into maintainable applications through clean code, 
 
 <div align="center">
 
-
-
 ## `~/` skill radar
 
 <table>
-<tr>
-<td width="50%" align="center" valign="middle">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
-  <img src="assets/radar-dark.svg" width="400" alt="engineering focus radar">
-</picture>
-
-</td>
-<td width="50%" align="center" valign="middle">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-delivery-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-delivery-light.svg">
-  <img src="assets/radar-delivery-dark.svg" width="400" alt="system delivery radar">
-</picture>
-
-</td>
-</tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <strong>01 · ENGINEERING FUNDAMENTALS</strong><br>
+      <sub>Problem solving · Design · Implementation</sub><br><br>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
+        <img src="assets/radar-dark.svg" width="100%" alt="Software engineering skills radar">
+      </picture>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <strong>02 · DELIVERY & RELIABILITY</strong><br>
+      <sub>Testing · Deployment · Monitoring</sub><br><br>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/radar-delivery-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="assets/radar-delivery-light.svg">
+        <img src="assets/radar-delivery-dark.svg" width="100%" alt="Software delivery and reliability radar">
+      </picture>
+    </td>
+  </tr>
 </table>
 
 </div>
@@ -152,35 +150,33 @@ I enjoy turning requirements into maintainable applications through clean code, 
 
 ## `~/` engineering loop
 
-```text
-                           USER REQUIREMENT
-                                  │
-                                  ▼
-                       CLARIFY SCOPE + EDGE CASES
-                                  │
-                                  ▼
-                    BREAK DOWN PROBLEM + DESIGN APIs
-                                  │
-                                  ▼
-                    SELECT DATA STRUCTURES + DATABASES
-                                  │
-                                  ▼
-                       IMPLEMENT CLEAN, MODULAR CODE
-                                  │
-                                  ▼
-                       UNIT + INTEGRATION TESTS
-                                  │
-                                  ▼
-                       DEBUG + REVIEW + REFACTOR
-                                  │
-                                  ▼
-                           CI/CD + DEPLOYMENT
-                                  │
-                                  ▼
-                       MONITOR + OPTIMIZE + SCALE
-```
+<table>
+  <tr>
+    <td align="center" width="33%"><sub>STEP 01</sub><br><strong>DEFINE</strong><br>Requirements & edge cases</td>
+    <td align="center" width="33%"><sub>STEP 02</sub><br><strong>DESIGN</strong><br>Decompose problems · APIs · data</td>
+    <td align="center" width="33%"><sub>STEP 03</sub><br><strong>BUILD</strong><br>Clean, modular implementation</td>
+  </tr>
+  <tr>
+    <td align="center">↓</td>
+    <td align="center">↓</td>
+    <td align="center">↓</td>
+  </tr>
+  <tr>
+    <td align="center" width="33%"><sub>STEP 04</sub><br><strong>VERIFY</strong><br>Unit & integration tests</td>
+    <td align="center" width="33%"><sub>STEP 05</sub><br><strong>REFINE</strong><br>Debug · review · refactor</td>
+    <td align="center" width="33%"><sub>STEP 06</sub><br><strong>SHIP</strong><br>CI/CD · deployment</td>
+  </tr>
+  <tr>
+    <td align="center">↘</td>
+    <td align="center">↓</td>
+    <td align="center">↙</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><strong>07 · OBSERVE & IMPROVE</strong><br>Monitor performance · optimize bottlenecks · scale reliably</td>
+  </tr>
+</table>
 
-The goal is to build **maintainable, tested, and scalable software**—from clear requirements and sound design through deployment and iteration.
+<p align="center"><em>Build for correctness. Design for change. Ship with confidence.</em></p>
 
 ---
 
