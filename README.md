@@ -119,34 +119,43 @@ I enjoy turning requirements into maintainable applications through clean code, 
 
 <div align="center">
 
+
 ## `~/` skill radar
 
-<table>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <strong>01 · ENGINEERING FUNDAMENTALS</strong><br>
-      <sub>Problem solving · Design · Implementation</sub><br><br>
+<div class="radar-dashboard">
+
+  <div class="radar-card">
+    <h3>01 · ENGINEERING FUNDAMENTALS</h3>
+    <p>Problem solving · Design · Implementation</p>
+    <div class="radar-3d">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
-        <img src="assets/radar-dark.svg" width="100%" alt="Software engineering skills radar">
+        <source media="(prefers-color-scheme: dark)"
+                srcset="assets/radar-dark.svg">
+        <source media="(prefers-color-scheme: light)"
+                srcset="assets/radar-light.svg">
+        <img src="assets/radar-dark.svg"
+             alt="Engineering skills radar">
       </picture>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <strong>02 · DELIVERY & RELIABILITY</strong><br>
-      <sub>Testing · Deployment · Monitoring</sub><br><br>
+    </div>
+  </div>
+
+  <div class="radar-card">
+    <h3>02 · DELIVERY & RELIABILITY</h3>
+    <p>Testing · Deployment · Monitoring</p>
+    <div class="radar-3d">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="assets/radar-delivery-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="assets/radar-delivery-light.svg">
-        <img src="assets/radar-delivery-dark.svg" width="100%" alt="Software delivery and reliability radar">
+        <source media="(prefers-color-scheme: dark)"
+                srcset="assets/radar-delivery-dark.svg">
+        <source media="(prefers-color-scheme: light)"
+                srcset="assets/radar-delivery-light.svg">
+        <img src="assets/radar-delivery-dark.svg"
+             alt="Delivery and reliability radar">
       </picture>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
 
 </div>
 
----
 
 ## `~/` engineering loop
 
