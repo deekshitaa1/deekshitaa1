@@ -29,95 +29,152 @@
 
 </div>
 
+
+
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-import math, os, zipfile
+import os, math, zipfile
 
-outdir = "/mnt/data/amazon_sde_readme_pink"
-os.makedirs(outdir, exist_ok=True)
-W, H, N = 960, 560, 40
-font_reg = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-font_bold = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-def F(sz, bold=False):
-    return ImageFont.truetype(font_bold if bold else font_reg, sz)
+base="/mnt/data/sde_snake_ladder_readme"
+assets=os.path.join(base,"assets")
+os.makedirs(assets,exist_ok=True)
+W,H=1000,620
+N=48
+reg="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+bold="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+def ft(s,b=False): return ImageFont.truetype(bold if b else reg,s)
 
-def glow(base, x, y, r, color, blur=16):
-    lay = Image.new("RGBA", base.size, (0,0,0,0))
-    ImageDraw.Draw(lay).ellipse((x-r,y-r,x+r,y+r), fill=color)
-    lay = lay.filter(ImageFilter.GaussianBlur(blur))
-    base.alpha_composite(lay)
-    ImageDraw.Draw(base).ellipse((x-r*.42,y-r*.42,x+r*.42,y+r*.42), fill=color)
+def draw_glow(im,x,y,r,rgba,blur=18):
+    layer=Image.new("RGBA",im.size,(0,0,0,0))
+    ImageDraw.Draw(layer).ellipse((x-r,y-r,x+r,y+r),fill=rgba)
+    im.alpha_composite(layer.filter(ImageFilter.GaussianBlur(blur)))
 
 frames=[]
-cx, cy = 480, 290
-for i in range(N):
-    im = Image.new("RGBA", (W,H), (15,13,18,255))
-    # soft rose/gold atmospheric bloom
+for f in range(N):
+    im=Image.new("RGBA",(W,H),(25,15,22,255))
     haze=Image.new("RGBA",(W,H),(0,0,0,0))
     hd=ImageDraw.Draw(haze)
-    hd.ellipse((90,45,870,540), fill=(194,91,129,38))
-    hd.ellipse((280,110,700,470), fill=(235,190,112,20))
-    haze=haze.filter(ImageFilter.GaussianBlur(95)); im.alpha_composite(haze)
+    hd.ellipse((80,70,930,600),fill=(175,75,111,32))
+    hd.ellipse((300,100,800,520),fill=(224,166,119,19))
+    im.alpha_composite(haze.filter(ImageFilter.GaussianBlur(90)))
     d=ImageDraw.Draw(im)
-    d.text((48,28),"ENGINEERING CAPABILITY MATRIX",font=F(16,True),fill=(255,220,232,255))
-    d.text((48,54),"SOFTWARE DEVELOPMENT ENGINEER  /  SYSTEMS THINKING",font=F(10),fill=(194,177,185,255))
-    d.rounded_rectangle((48,90,260,122),radius=9,fill=(54,34,45,230),outline=(211,133,160,170),width=1)
-    d.text((62,99),"01  /  CORE ENGINEERING",font=F(11,True),fill=(255,221,232,255))
-    # perspective radar platform
-    for k in range(1,7):
-        rx=44+k*48; ry=rx*.43
-        d.ellipse((cx-rx,cy-ry,cx+rx,cy+ry),outline=(166,103,126,105),width=2)
-    for a in range(0,360,30):
-        aa=math.radians(a)
-        d.line((cx,cy,cx+330*math.cos(aa),cy+142*math.sin(aa)),fill=(117,81,99,95),width=1)
-    d.ellipse((cx-310,cy-134,cx+310,cy+134),outline=(242,196,132,210),width=3)
-    d.arc((cx-318,cy-139,cx+318,cy+139),185,350,fill=(255,221,232,230),width=4)
-    # stacked depth rings
-    for z in range(1,7):
-        d.ellipse((cx-90,cy-42+z*7,cx+90,cy+42+z*7),outline=(178,103,132,110),width=2)
-    d.ellipse((cx-90,cy-42,cx+90,cy+42),fill=(64,36,49,255),outline=(255,220,232,255),width=3)
-    d.text((cx-47,cy-13),"SDE CORE",font=F(18,True),fill=(255,242,224,255))
-    # sweep wedge rotates
-    ang=2*math.pi*i/N
-    sweep=Image.new("RGBA",(W,H),(0,0,0,0)); sd=ImageDraw.Draw(sweep)
-    pts=[(cx,cy)]
-    for t in range(26):
-        a=ang+t*.012
-        pts.append((cx+310*math.cos(a),cy+134*math.sin(a)))
-    pts.append((cx,cy))
-    sd.polygon(pts,fill=(255,190,213,25))
-    sd.line((cx,cy,cx+310*math.cos(ang),cy+134*math.sin(ang)),fill=(255,224,177,230),width=3)
-    im.alpha_composite(sweep)
-    # nodes
-    nodes=[("DSA",0),("OOP",1.05),("API",2.1),("DATABASES",3.15),("DESIGN",4.2),("RELIABILITY",5.25)]
-    for label, a0 in nodes:
-        a=a0+ang*.16
-        x=int(cx+238*math.cos(a)); y=int(cy+102*math.sin(a))
-        glow(im,x,y,13,(255,190,213,190),18)
-        ImageDraw.Draw(im).text((x-34,y-30),label,font=F(10,True),fill=(255,235,241,255))
+    d.text((46,28),"THE SDE CLIMB",font=ft(22,True),fill=(255,221,232,255))
+    d.text((48,61),"A LITTLE SNAKE. A BIG SYSTEM. SHIP IT ANYWAY.",font=ft(11,True),fill=(220,179,190,255))
+    # board perspective
+    left,top=190,135
+    cw,ch=82,65
+    # board outer shadow / frame
+    d.rounded_rectangle((left-16,top-16,left+10*cw+16,top+6*ch+16),radius=18,fill=(47,25,36,255),outline=(207,145,159,220),width=3)
+    # cells 1..60 in serpentine rows
+    for row in range(6):
+        for col in range(10):
+            x=left+col*cw; y=top+row*ch
+            num=row*10+(col+1) if row%2==0 else row*10+(10-col)
+            fill=(82,43,59,255) if (row+col)%2==0 else (105,58,73,255)
+            d.rounded_rectangle((x+2,y+2,x+cw-2,y+ch-2),radius=6,fill=fill,outline=(166,105,124,190),width=1)
+            d.text((x+9,y+7),f"{num:02d}",font=ft(10,True),fill=(245,214,220,220))
+    # ladder from lower-left to upper-middle
+    def ladder(p1,p2):
+        x1,y1=p1; x2,y2=p2
+        d.line((x1-9,y1,x2-9,y2),fill=(255,214,155,255),width=5)
+        d.line((x1+9,y1,x2+9,y2),fill=(255,214,155,255),width=5)
+        for t in [k/8 for k in range(1,8)]:
+            x=x1+(x2-x1)*t; y=y1+(y2-y1)*t
+            d.line((x-10,y,x+10,y),fill=(255,235,194,255),width=3)
+    ladder((left+cw*1.5,top+ch*5.25),(left+cw*4.2,top+ch*2.0))
+    ladder((left+cw*6.0,top+ch*4.5),(left+cw*8.0,top+ch*1.2))
+    # snake curve with animated head
+    pts=[]
+    for k in range(100):
+        t=k/99
+        x=left+cw*(8.9-5.7*t)
+        y=top+ch*(0.6+4.5*t)+math.sin(t*math.pi*4+f*2*math.pi/N)*8
+        pts.append((x,y))
+    d.line(pts,fill=(230,130,158,255),width=13,joint="curve")
+    d.line(pts,fill=(255,193,208,255),width=3,joint="curve")
+    hx,hy=pts[0]
+    draw_glow(im,int(hx),int(hy),19,(255,135,174,130),18)
     d=ImageDraw.Draw(im)
-    # side telemetry panels
-    d.rounded_rectangle((48,420,270,500),radius=12,fill=(36,25,33,210),outline=(174,112,139,150),width=1)
-    d.text((66,438),"DESIGN PRINCIPLE",font=F(10,True),fill=(236,190,207,255))
-    d.text((66,462),"Correctness  ·  Clarity",font=F(12),fill=(255,244,232,255))
-    d.rounded_rectangle((690,420,912,500),radius=12,fill=(36,25,33,210),outline=(207,166,111,150),width=1)
-    d.text((708,438),"ENGINEERING MODE",font=F(10,True),fill=(236,190,207,255))
-    d.text((708,462),"Design  /  Build  /  Verify",font=F(11),fill=(255,244,232,255))
-    d.text((48,530),"PINK  /  IVORY  /  CHAMPAGNE GOLD",font=F(9,True),fill=(195,168,180,255))
-    d.text((840,530),"LIVE  •  01",font=F(9,True),fill=(237,204,160,255))
+    d.ellipse((hx-13,hy-13,hx+13,hy+13),fill=(255,174,195,255),outline=(255,232,236,255),width=2)
+    d.ellipse((hx-5,hy-4,hx-2,hy-1),fill=(72,29,48,255))
+    d.ellipse((hx+3,hy-4,hx+6,hy-1),fill=(72,29,48,255))
+    # token moves along serpentine path 1..60
+    step=(f/(N-1))*59
+    r=int(step)//10; c=int(step)%10
+    if r%2==1: c=9-c
+    tx=left+(c+.5)*cw; ty=top+(r+.5)*ch
+    draw_glow(im,int(tx),int(ty),20,(255,218,160,180),20)
+    d=ImageDraw.Draw(im)
+    d.ellipse((tx-11,ty-11,tx+11,ty+11),fill=(255,226,177,255),outline=(255,250,229,255),width=2)
+    # side panel
+    d.rounded_rectangle((48,145,160,525),radius=15,fill=(49,27,38,230),outline=(173,105,129,180),width=1)
+    d.text((65,170),"LEVEL",font=ft(10,True),fill=(224,173,191,255))
+    d.text((65,195),"SDE",font=ft(22,True),fill=(255,226,233,255))
+    d.line((65,238,142,238),fill=(173,105,129,180),width=1)
+    d.text((65,260),"BUGS",font=ft(10,True),fill=(224,173,191,255))
+    d.text((65,282),"0*",font=ft(22,True),fill=(255,226,233,255))
+    d.text((65,330),"BUILDS",font=ft(10,True),fill=(224,173,191,255))
+    d.text((65,352),"∞",font=ft(25,True),fill=(255,226,233,255))
+    d.text((65,420),"*IN THEORY",font=ft(8),fill=(202,164,176,255))
+    d.rounded_rectangle((left,545,970,592),radius=12,fill=(48,27,38,235),outline=(194,132,150,150),width=1)
+    d.text((left+18,559),"CLIMB: TESTS PASS  →  DEPLOY",font=ft(12,True),fill=(255,224,231,255))
+    d.text((720,559),"SLIDE: UNCAUGHT EXCEPTION",font=ft(10,True),fill=(255,193,168,255))
     frames.append(im.convert("RGB"))
 
-gif_path=os.path.join(outdir,"sde-engineering-radar.gif")
-frames[0].save(gif_path, save_all=True, append_images=frames[1:], duration=100, loop=0, optimize=True)
+gif=os.path.join(assets,"sde-snake-ladder.gif")
+frames[0].save(gif,save_all=True,append_images=frames[1:],duration=100,loop=0,optimize=True)
 
-md = r'''<!-- SDE TECHNICAL SKILLS — place this AFTER ~/ whoami; keep the profile header and whoami unchanged -->
+readme=r'''<!-- REPLACE FROM YOUR EXISTING `~/ whoami` SECTION TO THE END WITH THIS CONTENT.
+     Keep the profile photo, typing banner, social links and all content ABOVE whoami unchanged. -->
+
+---
+
+## `~/` whoami
+
+```console
+$ whoami
+Deekshita Rajesh
+
+$ role --target
+Software Development Engineer
+
+$ engineering --focus
+Data Structures · Backend Systems · API Design · Reliability
+
+$ objective
+Build correct, maintainable software. Understand the trade-offs. Ship with confidence.
+```
+
+I enjoy solving engineering problems from first principles: choosing the right data structures, designing clear interfaces, building dependable backend services, and testing how systems behave when things go wrong.
+
+> **Good code gets it working. Good engineering makes it dependable.**
+
+---
+
+## `~/` the engineering game
+
+<div align="center">
+  <img src="assets/sde-snake-ladder.gif" width="100%" alt="Animated blush pink and chocolate wine SDE snake and ladder board">
+  <sub>ROLL THE DICE · SOLVE THE BUG · CLIMB THE LADDER · SHIP THE BUILD</sub>
+</div>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>🪜 THE LADDER — LEVEL UP</strong><br><br>
+      `DSA` → `OOP` → `Design` → `Implementation` → `Testing` → `Deployment`
+    </td>
+    <td width="50%" valign="top">
+      <strong>🐍 THE SNAKE — REAL-WORLD SURPRISES</strong><br><br>
+      Off-by-one errors · Race conditions · Failed tests · Slow queries · Unexpected input
+    </td>
+  </tr>
+</table>
+
+<sub>Game rule: every bug is a lesson; every passing test is one step up. No production database was harmed in this game.</sub>
 
 ---
 
 ## `~/` technical skills
-
-<div align="center">
-  <img src="assets/sde-engineering-radar.gif" width="100%" alt="Animated software engineering capability radar">
-</div>
 
 <table>
   <tr>
@@ -139,19 +196,16 @@ md = r'''<!-- SDE TECHNICAL SKILLS — place this AFTER ~/ whoami; keep the prof
     <td width="50%" valign="top">
       <strong>SOFTWARE ENGINEERING</strong><br><br>
       <code>Software Development Life Cycle</code><br>
-      <code>Software Design</code><br>
-      <code>Design Patterns</code><br>
+      <code>Software Design</code> · <code>Design Patterns</code><br>
       <code>Distributed Systems</code><br>
       <code>RESTful API Development</code><br>
-      <code>Software Testing</code><br>
-      <code>Debugging</code><br>
+      <code>Software Testing</code> · <code>Debugging</code><br>
       <code>Code Quality</code>
     </td>
     <td width="50%" valign="top">
       <strong>BACKEND & DATABASES</strong><br><br>
-      <code>Node.js</code> <code>Express.js</code><br>
-      <code>FastAPI</code> <code>PostgreSQL</code><br>
-      <code>SQL Server</code> <code>SQL</code><br>
+      <code>Node.js</code> · <code>Express.js</code> · <code>FastAPI</code><br>
+      <code>PostgreSQL</code> · <code>SQL Server</code> · <code>SQL</code><br>
       <code>Relational Database Design</code><br>
       <code>Database Indexing</code>
     </td>
@@ -159,23 +213,86 @@ md = r'''<!-- SDE TECHNICAL SKILLS — place this AFTER ~/ whoami; keep the prof
   <tr>
     <td colspan="2" valign="top">
       <strong>SYSTEMS & DEVELOPER TOOLS</strong><br><br>
-      <code>WebSockets</code> <code>Socket.IO</code>
-      <code>Git</code> <code>Docker</code> <code>AWS</code>
+      <code>WebSockets</code> · <code>Socket.IO</code> · <code>Git</code> · <code>Docker</code> · <code>AWS</code>
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <sub>PROBLEM SOLVING · DESIGN · IMPLEMENTATION · TESTING · RELIABILITY</sub>
-</p>
-'''
-md_path=os.path.join(outdir,"TECHNICAL-SKILLS-README.md")
-with open(md_path,"w",encoding="utf-8") as f: f.write(md)
-zip_path="/mnt/data/amazon_sde_pink_readme_package.zip"
-with zipfile.ZipFile(zip_path,"w",zipfile.ZIP_DEFLATED) as z:
-    z.write(gif_path,"assets/sde-engineering-radar.gif")
-    z.write(md_path,"TECHNICAL-SKILLS-README.md")
-print("Created", gif_path, os.path.getsize(gif_path), md_path, zip_path, os.path.getsize(zip_path))
+---
 
-print(zip_path, os.path.getsize(zip_path))
+## `~/` how I ship software
+
+<div align="center">
+
+| 01 · UNDERSTAND | 02 · DESIGN | 03 · BUILD |
+|:---:|:---:|:---:|
+| Requirements & edge cases | Data models & APIs | Clean implementation |
+| **04 · VERIFY** | **05 · HARDEN** | **06 · SHIP** |
+| Unit & integration tests | Debugging & review | Deployment & monitoring |
+
+</div>
+
+```text
+REQUIREMENTS
+    ↓
+PROBLEM DECOMPOSITION
+    ↓
+DATA STRUCTURES + ALGORITHMS
+    ↓
+DESIGN + IMPLEMENTATION
+    ↓
+TEST + DEBUG + REVIEW
+    ↓
+DEPLOY + OBSERVE + IMPROVE
+```
+
+---
+
+## `~/` selected systems
+
+| PROJECT | ENGINEERING FOCUS |
+|---|---|
+| [CodeTogether](https://github.com/deekshitaa1/CodeTogether) | Real-time collaborative coding, application architecture and communication |
+| [ATLAS-X](https://github.com/deekshitaa1/ATLAS-X) | Storage engine concepts, indexing, transactions and distributed-storage research |
+| [SQL Data Warehouse](https://github.com/deekshitaa1/sql-data-warehouse-project) | SQL engineering, ETL and dimensional data modelling |
+
+---
+
+## `~/` engineering principles
+
+```text
+01  CLARIFY THE REQUIREMENTS
+02  THINK THROUGH EDGE CASES
+03  PICK THE RIGHT DATA STRUCTURES
+04  KEEP INTERFACES AND MODULES CLEAR
+05  TEST FAILURE PATHS, NOT JUST HAPPY PATHS
+06  DEBUG WITH EVIDENCE
+07  REVIEW FOR CORRECTNESS AND MAINTAINABILITY
+08  SHIP, MONITOR, LEARN, REPEAT
+```
+
+---
+
+<div align="center">
+
+### SOFTWARE DEVELOPMENT · BACKEND ENGINEERING · SYSTEM DESIGN
+
+**Deekshita Rajesh**
+
+[LinkedIn](https://www.linkedin.com/in/deekshita-rajesh) · [GitHub](https://github.com/deekshitaa1) · [Portfolio](https://deekshita-portfolio-one.vercel.app/)
+
+<sub>`01010011 01000100 01000101` — STILL DEBUGGING. STILL BUILDING.</sub>
+
+</div>
+'''
+md=os.path.join(base,"README-from-whoami-to-end.md")
+with open(md,"w",encoding="utf-8") as f:f.write(readme)
+zip_path="/mnt/data/sde_snake_ladder_blush_wine_readme.zip"
+with zipfile.ZipFile(zip_path,"w",zipfile.ZIP_DEFLATED) as z:
+    z.write(gif,"assets/sde-snake-ladder.gif")
+    z.write(md,"README-from-whoami-to-end.md")
+print("Created:",zip_path,os.path.getsize(zip_path))
+print("GIF:",gif,os.path.getsize(gif))
+print("Markdown:",md)
+
 
